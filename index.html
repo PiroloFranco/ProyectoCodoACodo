@@ -1,215 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilos/style.css" />
-    <script src="js/script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agrego el link al CDN de fontAwesome para que se vean los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--Favicon-->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <!--Termina Favion-->
-    <!-- Google Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <!-- Termina Google Fonts -->
-    <!-- Agrego el link al CDN de fontAwesome para que se vean los iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Proyecto CAC</title>
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>
-          <a href="index.html" class="titulo">Aura Patagonia</a>
-        </h1>
-      </header>
-      <nav class="botones-nav">
-        <ul>
-          <li>
-            <a href="index.html">Inicio</a>
-          </li>
-          <li>
-            <a href="pages/aboutUs.html">Destinos</a>
-          </li>
-          <li>
-            <a href="pages/lugares.html">Alojamiento</a>
-          </li>
-          <li>
-            <a href="">About Us</a>
-          </li>
-          <li>
-            <input type="text" placeholder="Ingrese su destino" />
-            <div class="contenedor-busqueda">
-              <i class="fa fa-search"></i> <!-- No se ve el icono del fontAwesome, falta el link, usamos la CDN o el kit? Yo prefiero la cdn... -->
-              <div class="btn">
-              </div>
-          </li>
-        </ul>
-        </div>
-      </nav>
-    </main>
-    <section>
-      <h2>Visita uno de estos lugares</h2>
-      <h3>Bariloche</h3>
-      <div class="contenedor">
-        <img
-          src="images/bariloche.jpg"
-          alt="paisaje de Bariloche"
-          class="img-bariloche"
-        />
-        <ul>
-          <li>
-              Visita Bariloche y participa de todas sus excursiones! 
-          </li>
-          <li>
-              Circuito Chico: Paseo en barco por el lago Nahuel Huapi, con paradas
-              en la Isla Victoria y el Bosque de Arrayanes. Cerro Tronador: Caminata
-              hasta el glaciar Ventisquero Negro, con vistas impresionantes de la
-              cordillera de los Andes. Siete Lagos: Paseo en auto por un camino
-              escénico que bordea siete lagos de color turquesa. Villa La Angostura:
-              Pueblo pintoresco a orillas del lago Nahuel Huapi, con centro
-              comercial y opciones gastronómicas.
-            </li>
-            <li>
-              Aventura: Rafting en el río Manso: Recorrido emocionante por un río de
-              aguas rápidas, con rápidos de hasta clase IV. Cabalgata por la
-              cordillera: Exploración única de paisajes de montaña, guiada por
-              expertos a través de bosques, praderas y ríos. Trekking al Cerro
-              Catedral: Caminata desafiante hasta la cima del Cerro Catedral, el
-              punto más alto de la zona. Parapente: Experiencia inolvidable para
-              sobrevolar los lagos y montañas de Bariloche.
-            </li>
-            <li>
-              Jardín Botánico: Paseo tranquilo por un jardín con más de
-              2000 especies de plantas de todo el mundo. Colonia Suiza: Réplica de
-              un pueblo suizo con restaurantes, tiendas y un museo. Parque Nacional
-              Nahuel Huapi: Parque nacional con actividades para disfrutar en
-              familia, como senderismo, pesca y camping. Centro Cívico: Centro
-              cívico de Bariloche, con hermosa arquitectura y monumentos históricos.
-            </li>
-            <li>Para más información:
-              <a
-                href="https://barilocheturismo.gob.ar/es/home"
-                target="_blank" alt="boton de redirrecion"
-                >click aqui</a>
-            </li>
-          </ul>
-      </div>
-      <h3>Jujuy</h3>
-      <div class="contenedor">
-        <img src="images/jujuy.jpg" alt="paisaje de jujuy"/>
-        <ul>
-          <li>
-            Jujuy: Un viaje por la magia de los Andes Jujuy, tierra de contrastes
-            y colores vibrantes, te invita a sumergirte en la cultura milenaria,
-            la naturaleza imponente y la calidez de su gente. Desde la Quebrada de
-            Humahuaca, Patrimonio de la Humanidad, hasta las Salinas Grandes y los
-            pueblos históricos, Jujuy ofrece un abanico de experiencias para todos
-            los gustos.
-          </li>
-          <li>
-            Descubriendo la Quebrada de Humahuaca: Recorre este valle
-            multicolorido, declarado Patrimonio de la Humanidad por la UNESCO, y
-            maravíllate con sus cerros multicolores, pueblos tradicionales y
-            sitios arqueológicos. Puedes transitarla en auto, bus, bicicleta o
-            senderismo, disfrutando de paisajes únicos.
-          </li>
-          <li>
-            Las Salinas Grandes, un
-            mar de sal: Adéntrate en este salar infinito, uno de los más grandes
-            de Argentina, y vive una experiencia surrealista. Camina sobre la
-            superficie de sal, visita el Museo de Sal o emprende un tour en 4x4
-            para explorar este paisaje fascinante.
-          </li>
-          <li>
-            Purmamarca, un pueblo
-            pintoresco: Recorre las calles empedradas de este pueblo encantador,
-            ubicado al pie del Cerro de los Siete Colores. Visita el mercado de
-            artesanías, sube al cerro para disfrutar de vistas panorámicas o
-            simplemente déjate cautivar por su ambiente acogedor.
-          </li>
-          <li>
-            Tilcara,
-            historia entre cerros: Explora este pueblo histórico, antigua capital
-            de la civilización Omaguaca, y descubre sus ruinas arqueológicas.
-            Visita el Pucará de Tilcara, el Museo Regional Arqueológico o la
-            Iglesia San Francisco y adéntrate en la historia de esta región.
-          </li>
-          <li>
-            Humahuaca, la capital jujeña: Conoce esta ciudad colonial, capital de
-            la provincia, y admira sus edificios históricos como la Catedral de
-            San Francisco de Jujuy y el Cabildo de Jujuy. Visita el Mercado
-            Municipal para comprar artesanías y productos locales y disfruta de la
-            vibrante cultura local.
-          </li>
-          <li>
-            Más allá de lo tradicional: Jujuy ofrece un
-            sinfín de opciones para quienes buscan aventura. Visita el Parque
-            Nacional Yacuma, navega en balsa por el Río Grande o recorre la
-            Serranía de Hornocal, un paisaje geológico de colores vibrantes.
-          </li>
-          <li>
-            Para mas información: <a href="http://www.turismo.jujuy.gob.ar/" target="_blank">click aqui</a>
-          </li>
-        </ul>   
-      </div>
-      <h3>mendoza</h3>
-      <div class="contenedor">
-        <img src="images/mendoza.jpg" alt="Paisaje de Mendoza" class="img-bariloche" />
-          <ul>
-            <li>
-              Mendoza, tierra de vinos y montañas, ofrece una gran variedad de
-              excursiones para todos los gustos. Desde amantes del vino hasta
-              aventureros y exploradores, aquí encontrarás la actividad perfecta
-              para ti.
-            </li>
-            <li>
-              Ruta del Vino: Embárcate en un recorrido por las bodegas de la región
-              y descubre los secretos de la elaboración del vino mendocino. Degusta
-              diferentes variedades, aprende sobre el proceso de producción y
-              disfruta de la arquitectura y los paisajes de los viñedos.
-            </li>
-            <li>
-              Alta Montaña: Atrévete a explorar la imponente Cordillera de los
-              Andes. Realiza trekking por senderos que te llevarán a lugares
-              paradisíacos, como el Aconcagua, el pico más alto de América, o el
-              Puente del Inca, una maravilla natural formada por la erosión del río.
-            </li>
-            <li>
-              Aventura: Si buscas adrenalina, Mendoza te ofrece rafting en el río
-              Mendoza, puenting, parapente y tours en 4x4 por el desierto. Vive
-              experiencias emocionantes y conecta con la naturaleza en estado puro.
-            </li>
-            <li>
-              Ciudad de Mendoza: No te pierdas la encantadora ciudad de Mendoza.
-              Recorre su centro histórico, visita la Plaza Independencia, sube al
-              Cerro de la Gloria para obtener vistas panorámicas y sumérgete en la
-              cultura local.
-            </li>
-            <li>
-              Otras excursiones: Spa, clases de cocina, tours gastronómicos, visitas
-              a pueblos cercanos como Luján de Cuyo o Maipú... ¡Las opciones son
-              infinitas!
-            </li>
-            <li>
-              Para más información: <a href="https://mendoza.tur.ar/" target="_blank">click aqui</a>
-            </li>
-          </ul>
-      </div>
-    </section>
-    <footer>
-      <ul>
-        <li>pagina de Inicio</li>
-        <li>Direccion</li>
-        <li>numero de telefono</li>
-        <li>correo</li>
-        <li>redes</li>
-        <li>mapa del sitio</li>
-        <li>logotipo del sitio</li>
-      </ul>
-    </footer>
-    <script src="js/script.js"></script><!--tener varios archivos de js para que sea modular y sea mas facil el seguimiento-->
-  </body>
+    <!--Termina Favicon-->
+
+    <!--Agrego CDN de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Proyecto Front End Grupo 11</title>
+</head>
+<body>
+    <div class="contenedor-general"> <!--wrapper para hacer mas facil la responividad-->
+        <!-- HEADER, incluye logo y nav-->
+        <header class="padding-alrededor">
+            <!--EL LOGO VA AQUI,Por ahora es un h1 y el nombre es provisorio-->
+            <div class="logo">  
+                <h1>
+                    <a href="index.html" class="titulo">Argentina a un Click !</a>
+                </h1>
+            </div><!--fin del logo-->
+            <!--NAV-->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="pages/aboutUs.html">Destinos</a>
+                    </li>
+                    <li>
+                        <a href="pages/lugares.html">Alojamientos</a>
+                    </li>
+                    <li>
+                        <a href="">Acerca de nosotros...</a>
+                    </li>
+                </ul>    
+            </nav><!--fin del NAV-->
+        </header><!--fin del header-->
+
+        <!--MAIN-->
+        <main>
+            <h2 class="main-encabezado texto-centrado">Los destinos mas emocionantes, al alcance de un click!</h2>
+            <article class="contenedor-destino">
+                <h3 class="texto-centrado">Bariloche</h3>
+                <div class="contendedor-destino__presentacion">
+                    <div class="contenedor-destino__presentacion-imagen">
+                        <img src="images/bariloche.jpg" alt="paisaje de Bariloche">
+                    </div>
+                    <div class="contenedor-destino__presentacion-texto">
+                        <h4 class="texto-centrado">Visita Bariloche y participa de todas sus excursiones!</h4>
+                        <p><span><i class="fa-regular fa-compass"></i></span> Circuito Chico: Paseo en barco por el lago Nahuel Huapi, con paradas
+                            en la Isla Victoria y el Bosque de Arrayanes. Cerro Tronador: Caminata
+                            hasta el glaciar Ventisquero Negro, con vistas impresionantes de la
+                            cordillera de los Andes. Siete Lagos: Paseo en auto por un camino
+                            escénico que bordea siete lagos de color turquesa. Villa La Angostura:
+                            Pueblo pintoresco a orillas del lago Nahuel Huapi, con centro
+                            comercial y opciones gastronómicas.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Aventura: Rafting en el río Manso: Recorrido emocionante por un río de
+                            aguas rápidas, con rápidos de hasta clase IV. Cabalgata por la
+                            cordillera: Exploración única de paisajes de montaña, guiada por
+                            expertos a través de bosques, praderas y ríos. Trekking al Cerro
+                            Catedral: Caminata desafiante hasta la cima del Cerro Catedral, el
+                            punto más alto de la zona. Parapente: Experiencia inolvidable para
+                            sobrevolar los lagos y montañas de Bariloche.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Jardín Botánico: Paseo tranquilo por un jardín con más de
+                            2000 especies de plantas de todo el mundo. Colonia Suiza: Réplica de
+                            un pueblo suizo con restaurantes, tiendas y un museo. Parque Nacional
+                            Nahuel Huapi: Parque nacional con actividades para disfrutar en
+                            familia, como senderismo, pesca y camping. Centro Cívico: Centro
+                            cívico de Bariloche, con hermosa arquitectura y monumentos históricos.
+                        </p>
+                        <p>
+                            Para más información:
+                            <a
+                                href="https://barilocheturismo.gob.ar/es/home"
+                                target="_blank" alt="boton de redirrecion"
+                                >click aqui</a>
+                        </p>
+                    </div> <!--fin de contenedor-destino__presentacion-texto-->
+                </div>
+                <div class="contenedor-destino__galeria">
+                    <!--Galería con Bootstrap va aqui -->
+                </div><!--fin contenedor-destino__galeria-->
+            </article><!--fin contenedor destino-->
+            
+            <article class="contenedor-destino">
+                <h3 class="texto-centrado">Bariloche</h3>
+                <div class="contendedor-destino__presentacion">
+                    <div class="contenedor-destino__presentacion-imagen">
+                        <img src="images/bariloche.jpg" alt="paisaje de Bariloche">
+                    </div>
+                    <div class="contenedor-destino__presentacion-texto">
+                        <h4 class="texto-centrado">Visita Bariloche y participa de todas sus excursiones!</h4>
+                        <p><span><i class="fa-regular fa-compass"></i></span> Circuito Chico: Paseo en barco por el lago Nahuel Huapi, con paradas
+                            en la Isla Victoria y el Bosque de Arrayanes. Cerro Tronador: Caminata
+                            hasta el glaciar Ventisquero Negro, con vistas impresionantes de la
+                            cordillera de los Andes. Siete Lagos: Paseo en auto por un camino
+                            escénico que bordea siete lagos de color turquesa. Villa La Angostura:
+                            Pueblo pintoresco a orillas del lago Nahuel Huapi, con centro
+                            comercial y opciones gastronómicas.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Aventura: Rafting en el río Manso: Recorrido emocionante por un río de
+                            aguas rápidas, con rápidos de hasta clase IV. Cabalgata por la
+                            cordillera: Exploración única de paisajes de montaña, guiada por
+                            expertos a través de bosques, praderas y ríos. Trekking al Cerro
+                            Catedral: Caminata desafiante hasta la cima del Cerro Catedral, el
+                            punto más alto de la zona. Parapente: Experiencia inolvidable para
+                            sobrevolar los lagos y montañas de Bariloche.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Jardín Botánico: Paseo tranquilo por un jardín con más de
+                            2000 especies de plantas de todo el mundo. Colonia Suiza: Réplica de
+                            un pueblo suizo con restaurantes, tiendas y un museo. Parque Nacional
+                            Nahuel Huapi: Parque nacional con actividades para disfrutar en
+                            familia, como senderismo, pesca y camping. Centro Cívico: Centro
+                            cívico de Bariloche, con hermosa arquitectura y monumentos históricos.
+                        </p>
+                        <p>
+                            Para más información:
+                            <a
+                                href="https://barilocheturismo.gob.ar/es/home"
+                                target="_blank" alt="boton de redirrecion"
+                                >click aqui</a>
+                        </p>
+                    </div> <!--fin de contenedor-destino__presentacion-texto-->
+                </div>
+                <div class="contenedor-destino__galeria">
+                    <!--Galería con Bootstrap va aqui -->
+                </div><!--fin contenedor-destino__galeria-->
+            </article><!--fin contenedor destino-->
+
+            <article class="contenedor-destino">
+                <h3 class="texto-centrado">Bariloche</h3>
+                <div class="contendedor-destino__presentacion">
+                    <div class="contenedor-destino__presentacion-imagen">
+                        <img src="images/bariloche.jpg" alt="paisaje de Bariloche">
+                    </div>
+                    <div class="contenedor-destino__presentacion-texto">
+                        <h4 class="texto-centrado">Visita Bariloche y participa de todas sus excursiones!</h4>
+                        <p><span><i class="fa-regular fa-compass"></i></span> Circuito Chico: Paseo en barco por el lago Nahuel Huapi, con paradas
+                            en la Isla Victoria y el Bosque de Arrayanes. Cerro Tronador: Caminata
+                            hasta el glaciar Ventisquero Negro, con vistas impresionantes de la
+                            cordillera de los Andes. Siete Lagos: Paseo en auto por un camino
+                            escénico que bordea siete lagos de color turquesa. Villa La Angostura:
+                            Pueblo pintoresco a orillas del lago Nahuel Huapi, con centro
+                            comercial y opciones gastronómicas.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Aventura: Rafting en el río Manso: Recorrido emocionante por un río de
+                            aguas rápidas, con rápidos de hasta clase IV. Cabalgata por la
+                            cordillera: Exploración única de paisajes de montaña, guiada por
+                            expertos a través de bosques, praderas y ríos. Trekking al Cerro
+                            Catedral: Caminata desafiante hasta la cima del Cerro Catedral, el
+                            punto más alto de la zona. Parapente: Experiencia inolvidable para
+                            sobrevolar los lagos y montañas de Bariloche.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Jardín Botánico: Paseo tranquilo por un jardín con más de
+                            2000 especies de plantas de todo el mundo. Colonia Suiza: Réplica de
+                            un pueblo suizo con restaurantes, tiendas y un museo. Parque Nacional
+                            Nahuel Huapi: Parque nacional con actividades para disfrutar en
+                            familia, como senderismo, pesca y camping. Centro Cívico: Centro
+                            cívico de Bariloche, con hermosa arquitectura y monumentos históricos.
+                        </p>
+                        <p>
+                            Para más información:
+                            <a
+                                href="https://barilocheturismo.gob.ar/es/home"
+                                target="_blank" alt="boton de redirrecion"
+                                >click aqui</a>
+                        </p>
+                    </div> <!--fin de contenedor-destino__presentacion-texto-->
+                </div>
+                <div class="contenedor-destino__galeria">
+                    <!--Galería con Bootstrap va aqui -->
+                </div><!--fin contenedor-destino__galeria-->
+            </article><!--fin contenedor destino-->
+            <article class="contenedor-destino">
+                <h3 class="texto-centrado">Bariloche</h3>
+                <div class="contendedor-destino__presentacion">
+                    <div class="contenedor-destino__presentacion-imagen">
+                        <img src="images/bariloche.jpg" alt="paisaje de Bariloche">
+                    </div>
+                    <div class="contenedor-destino__presentacion-texto">
+                        <h4 class="texto-centrado">Visita Bariloche y participa de todas sus excursiones!</h4>
+                        <p><span><i class="fa-regular fa-compass"></i></span> Circuito Chico: Paseo en barco por el lago Nahuel Huapi, con paradas
+                            en la Isla Victoria y el Bosque de Arrayanes. Cerro Tronador: Caminata
+                            hasta el glaciar Ventisquero Negro, con vistas impresionantes de la
+                            cordillera de los Andes. Siete Lagos: Paseo en auto por un camino
+                            escénico que bordea siete lagos de color turquesa. Villa La Angostura:
+                            Pueblo pintoresco a orillas del lago Nahuel Huapi, con centro
+                            comercial y opciones gastronómicas.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Aventura: Rafting en el río Manso: Recorrido emocionante por un río de
+                            aguas rápidas, con rápidos de hasta clase IV. Cabalgata por la
+                            cordillera: Exploración única de paisajes de montaña, guiada por
+                            expertos a través de bosques, praderas y ríos. Trekking al Cerro
+                            Catedral: Caminata desafiante hasta la cima del Cerro Catedral, el
+                            punto más alto de la zona. Parapente: Experiencia inolvidable para
+                            sobrevolar los lagos y montañas de Bariloche.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Jardín Botánico: Paseo tranquilo por un jardín con más de
+                            2000 especies de plantas de todo el mundo. Colonia Suiza: Réplica de
+                            un pueblo suizo con restaurantes, tiendas y un museo. Parque Nacional
+                            Nahuel Huapi: Parque nacional con actividades para disfrutar en
+                            familia, como senderismo, pesca y camping. Centro Cívico: Centro
+                            cívico de Bariloche, con hermosa arquitectura y monumentos históricos.
+                        </p>
+                        <p>
+                            Para más información:
+                            <a
+                                href="https://barilocheturismo.gob.ar/es/home"
+                                target="_blank" alt="boton de redirrecion"
+                                >click aqui</a>
+                        </p>
+                    </div> <!--fin de contenedor-destino__presentacion-texto-->
+                </div>
+                <div class="contenedor-destino__galeria">
+                    <!--Galería con Bootstrap va aqui -->
+                </div><!--fin contenedor-destino__galeria-->
+            </article><!--fin contenedor destino-->
+
+            <article class="contenedor-destino">
+                <h3 class="texto-centrado">Bariloche</h3>
+                <div class="contendedor-destino__presentacion">
+                    <div class="contenedor-destino__presentacion-imagen">
+                        <img src="images/bariloche.jpg" alt="paisaje de Bariloche">
+                    </div>
+                    <div class="contenedor-destino__presentacion-texto">
+                        <h4 class="texto-centrado">Visita Bariloche y participa de todas sus excursiones!</h4>
+                        <p><span><i class="fa-regular fa-compass"></i></span> Circuito Chico: Paseo en barco por el lago Nahuel Huapi, con paradas
+                            en la Isla Victoria y el Bosque de Arrayanes. Cerro Tronador: Caminata
+                            hasta el glaciar Ventisquero Negro, con vistas impresionantes de la
+                            cordillera de los Andes. Siete Lagos: Paseo en auto por un camino
+                            escénico que bordea siete lagos de color turquesa. Villa La Angostura:
+                            Pueblo pintoresco a orillas del lago Nahuel Huapi, con centro
+                            comercial y opciones gastronómicas.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Aventura: Rafting en el río Manso: Recorrido emocionante por un río de
+                            aguas rápidas, con rápidos de hasta clase IV. Cabalgata por la
+                            cordillera: Exploración única de paisajes de montaña, guiada por
+                            expertos a través de bosques, praderas y ríos. Trekking al Cerro
+                            Catedral: Caminata desafiante hasta la cima del Cerro Catedral, el
+                            punto más alto de la zona. Parapente: Experiencia inolvidable para
+                            sobrevolar los lagos y montañas de Bariloche.
+                        </p>
+                        <p><span><i class="fa-regular fa-compass"></i></span>Jardín Botánico: Paseo tranquilo por un jardín con más de
+                            2000 especies de plantas de todo el mundo. Colonia Suiza: Réplica de
+                            un pueblo suizo con restaurantes, tiendas y un museo. Parque Nacional
+                            Nahuel Huapi: Parque nacional con actividades para disfrutar en
+                            familia, como senderismo, pesca y camping. Centro Cívico: Centro
+                            cívico de Bariloche, con hermosa arquitectura y monumentos históricos.
+                        </p>
+                        <p>
+                            Para más información:
+                            <a
+                                href="https://barilocheturismo.gob.ar/es/home"
+                                target="_blank" alt="boton de redirrecion"
+                                >click aqui</a>
+                        </p>
+                    </div> <!--fin de contenedor-destino__presentacion-texto-->
+                </div>
+                <div class="contenedor-destino__galeria">
+                    <!--Galería con Bootstrap va aqui -->
+                </div><!--fin contenedor-destino__galeria-->
+            </article><!--fin contenedor destino-->
+            
+        </main> <!--fin de main-->
+
+
+    </div><!--fin contenedor general-->
+    <!--Script de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
