@@ -45,9 +45,14 @@ img{
 
 .contenedor-general{
     /*Evitar que la página se estire demasiado en pantallas muy grandes*/
+    /*width:100vw; /*evitamos el scroll horizontal, la página no es nunca mayor al ancho del dispositivo*/
     max-width:1320px;
-    width:100vw; /*evitamos el scroll horizontal, la página no es nunca mayor al ancho del dispositivo*/
-    margin-inline:auto; /*centramos el contenido de la página*/
+    margin:0 auto; /*centramos el contenido de la página*/
+    
+
+    /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
+    border: 2px solid yellow;
+    background-color: pink;
 }
 
 .padding-alrededor{
@@ -74,9 +79,8 @@ header{
     color: var(--color-secundario);
 
     /* COMO SIGUE ESTO: Esto va a necesitar de algun calc() para que no me tape el contenido que sigue */
-    position:sticky; /*ahora queda siempre en el mismo lugar aunque haga scroll ! :) */
+    position:fixed; /*ahora queda siempre en el mismo lugar aunque haga scroll ! :) */
     top: 0;
-    left:0;
 
     /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
     border: 3px solid violet;
@@ -122,6 +126,10 @@ nav li:hover{
 /*MAIN */
 /*=================================================*/
 
+main{
+    width: 100%;
+}
+
 .main-encabezado{
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -152,5 +160,28 @@ nav li:hover{
 
 .contenedor-destino__presentacion-texto span{
     margin-right: 1rem;
+}
+
+
+
+
+
+/*  ================================ MEDIA QUERIES  ================================ */
+/*=================================================================================== */
+
+/* MODO CELULARES PEQUEÑOS HASTA 576 PX */
+/****************************************/
+
+/* Que hay que hacer:
+    - El menú del nav tiene que salir de un boton tipo "hamburguesa
+
+*/
+@media screen and (max-width:576px) {
+
+
+    .contendedor-destino__presentacion{
+        grid-template-columns:1fr; /*sólo una columna */
+    }
+    
 }
 
