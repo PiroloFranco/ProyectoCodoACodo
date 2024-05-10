@@ -148,7 +148,7 @@ nav li:hover{
 .hero h1{
     font-family: var(--fuente-acento);
     color: var(--color-antique-white);
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     
 }
