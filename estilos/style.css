@@ -102,13 +102,10 @@ img{
 .logo{
     cursor: pointer;
     color:var(--color-secundario);
+    text-decoration: none; /*porque Bootstrap sobreescribe algunos estilos :( */
+    font-size: 2rem;
 }
 
-header h1 a{
-    color: inherit;
-    text-decoration: none; /*porque Bootstrap sobreescribe algunos estilos :( */
-    
-}
 
 .nav__lista-links li{
     display: inline-block;
@@ -143,6 +140,7 @@ nav li:hover{
     background-position: center;
     background-repeat: no-repeat;
     min-height: calc(100vh - 103px); /*no me gusta, es medio traido de los pelos*/
+    padding: 6%;
 }
 
 .hero h1{
