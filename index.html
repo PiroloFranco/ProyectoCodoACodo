@@ -19,16 +19,17 @@
 <body>
     <div class="contenedor-general"> <!--wrapper para hacer mas facil la responsividad-->
         <!-- HEADER, incluye logo y nav-->
-        <header class="padding-alrededor">
-            <!--EL LOGO VA AQUI,Por ahora es un h1 y el nombre es provisorio-->
+        <header class="encabezado padding-alrededor">
+                <!--EL LOGO VA AQUI,Por ahora es un h1 y el nombre es provisorio-->
             <div class="logo">  
                 <h1>
                     <a href="index.html" class="titulo">Argentina a un Click !</a>
                 </h1>
             </div><!--fin del logo-->
+
             <!--NAV-->
-            <nav>
-                <ul>
+            <nav class="nav-escritorio">
+                <ul class="nav__lista-links">
                     <li>
                         <a href="index.html">Inicio</a>
                     </li>
@@ -43,8 +44,14 @@
                     </li>
                 </ul>    
             </nav><!--fin del NAV-->
+            <!--ESTE ES EL BOTON QUE MUESTRA EL MENU EN LAS PANTALLAS MÁS PEQUEÑAS. NO DEBE VERSE EN VISTA ESCRITORIO-->
+            <button id="btn__menu-movil"><i class="fa-solid fa-bars"></i></button>
         </header><!--fin del header-->
+        <!--HERO-->
+        <section class="hero">
+            <h1>Hay un país fascinante esperándote <br> y se llama Argentina...</h1>
 
+        </section>
         <!--MAIN-->
         <main>
             <h2 class="main-encabezado texto-centrado">Los destinos mas emocionantes, al alcance de un click!</h2>
@@ -304,5 +311,6 @@
     <!--Script de Bootstrap-->
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     -->
+
 </body>
 </html>

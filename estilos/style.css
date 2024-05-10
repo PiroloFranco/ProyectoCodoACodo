@@ -11,7 +11,6 @@ Verde oliva: #556B2F (20%)*/
 /*  POR DEFECTO EL ESTILO ESTÁ DEFINIDO EN TAMAÑO ESCRITORIO */
 /* ===========================================================================*/
 
-
 /*Variables */
 /*===========*/
 :root{
@@ -21,6 +20,22 @@ Verde oliva: #556B2F (20%)*/
     --color-principal: #4E3B31; /*rgb(78, 59, 49);*/
     --color-secundario: #F5F5DC;
     --color-acento:#556B2F; /* para el call to action?*/
+
+    /*ALGUNOS COLORES QUE ME GUSTAN */
+    --color-raspberry: #CE2D4F;
+    --color-navajo-white: #FFE0B5;
+    --color-seal-brown: #472415;
+    --color-bistre: #3F2613;
+    --color-chamoise: #A98360;
+    --color-antique-white: #FDEED9;
+    --color-carnation-pink: #FFADC6;
+    --color-dogwood-rose: #D4216C;
+    --color-carmine:#991218;
+    --color-russet:#92512E;
+    --color-fern-green:#436A36;
+    --color--cerulean: #0081A7;
+    --color-verdigris:#00AFB9;
+    --color-caput-mortum:#4C2719;
 }
 
 /*Reset*/
@@ -45,18 +60,18 @@ img{
 
 .contenedor-general{
     /*Evitar que la página se estire demasiado en pantallas muy grandes*/
-    /*width:100vw; /*evitamos el scroll horizontal, la página no es nunca mayor al ancho del dispositivo*/
     max-width:1320px;
     margin:0 auto; /*centramos el contenido de la página*/
+    padding: 0 1.5rem 1.5rem;
     
 
     /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
     border: 2px solid yellow;
-    background-color: pink;
+    background-color: aquamarine;
 }
 
 .padding-alrededor{
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .texto-centrado{
@@ -67,25 +82,22 @@ img{
 
 /*HEADER Y NAV */
 /*=================================================*/
+.encabezado{
+    /*Mantiene su posición auque se haga scroll :) */
+    position: sticky;
+    top: 0px;
 
-header{
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    background-color: var(--color-acento);
-
-    color: var(--color-secundario);
-
-    /* COMO SIGUE ESTO: Esto va a necesitar de algun calc() para que no me tape el contenido que sigue */
-    position:fixed; /*ahora queda siempre en el mismo lugar aunque haga scroll ! :) */
-    top: 0;
+    background-color: var(--color-seal-brown);
 
     /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
     border: 3px solid violet;
-    
 }
+
+
 
 .logo{
     cursor: pointer;
@@ -94,20 +106,13 @@ header{
 
 header h1 a{
     color: inherit;
-    background-color: transparent;
     text-decoration: none; /*porque Bootstrap sobreescribe algunos estilos :( */
     
 }
 
-nav ul{
-    display:flex;
-    
-}
-
-nav ul li{
-    margin-right: 1.9rem;
-    
-    
+.nav__lista-links li{
+    display: inline-block;
+    padding: 1.25rem;
 }
 
 nav ul li a{
@@ -123,12 +128,33 @@ nav li:hover{
     transition: transform 0.2s ease-in-out;
 }
 
+/*Botón que se ve en las pantallas más pequeñas. En vista escritorio está oculto por defecto*/
+#btn__menu-movil{
+    font-size: 2.2rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/*HERO */
+/*=================================================*/
+.hero{
+    background-image: url("../images/hero/emilio-lujan-OKWAtnEfN4M-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 103px); /*no me gusta, es medio traido de los pelos*/
+}
+
+.hero h1{
+    font-family: var(--fuente-acento);
+    color: var(--color-antique-white);
+    font-size: 3rem;
+    text-align: center;
+    
+}
+
 /*MAIN */
 /*=================================================*/
-
-main{
-    width: 100%;
-}
 
 .main-encabezado{
     margin-top: 2rem;
