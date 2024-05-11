@@ -20,13 +20,13 @@
     <div class="contenedor-general"> <!--wrapper para hacer mas facil la responsividad-->
         <!-- HEADER, incluye logo y nav-->
         <header class="encabezado padding-alrededor">
-                <!--EL LOGO VA AQUI,Por ahora es un a y el nombre es provisorio-->
+                <!--EL LOGO VA AQUI,Por ahora es un <a> y el nombre es provisorio-->
             <div>  
                 <a class="logo" href="index.html">Argentina a un Click !</a>
             </div><!--fin del logo-->
 
             <!--NAV-->
-            <nav class="nav-escritorio">
+            <nav id="nav__contenedor">
                 <ul class="nav__lista-links">
                     <li>
                         <a href="index.html">Inicio</a>
@@ -47,7 +47,7 @@
         </header><!--fin del header-->
         <!--HERO-->
         <section class="hero">
-            <h1>Hay un país fascinante esperándote<br> y se llama Argentina...</h1>
+            <h1>Hay un país fascinante esperándote<br> y se llama <span>Argentina</span>...</h1>
             <p>Paisajes de ensueño...</p>
             <p>Desde las áridas llanuras hasta los picos nevados, desde las costas soleadas hasta los bosques frondosos, Argentina ofrece una 
                 variedad de paisajes sin igual. Un destino perfecto para los amantes de la naturaleza y la aventura
@@ -60,6 +60,8 @@
                 puertas de su corazón y te hará sentir como en casa.
             </p>
             <p>Argentina: Un canto a la diversidad, donde cada cultura es una melodía.</p>
+            <!--ACA DEBE IR UN BOTÓN CALL TO ACTION-->
+            <button class="btn-hero">No esperes más</button>
 
 
         </section><!--fin del hero-->
@@ -322,6 +324,6 @@
     <!--Script de Bootstrap-->
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     -->
-
+    <script src="js/script.js"></script>
 </body>
 </html>

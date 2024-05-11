@@ -62,12 +62,11 @@ img{
     /*Evitar que la página se estire demasiado en pantallas muy grandes*/
     max-width:1320px;
     margin:0 auto; /*centramos el contenido de la página*/
-    padding: 0 1.5rem 1.5rem;
+    /*padding: 0 1.5rem 1.5rem;*/
     
 
     /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
     border: 2px solid yellow;
-    background-color: aquamarine;
 }
 
 .padding-alrededor{
@@ -86,7 +85,7 @@ img{
     /*Mantiene su posición auque se haga scroll :) */
     position: sticky;
     top: 0px;
-
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -98,8 +97,9 @@ img{
 }
 
 
-
 .logo{
+    font-family: var(--fuente-acento);
+    font-weight: bolder;
     cursor: pointer;
     color:var(--color-secundario);
     text-decoration: none; /*porque Bootstrap sobreescribe algunos estilos :( */
@@ -127,9 +127,14 @@ nav li:hover{
 
 /*Botón que se ve en las pantallas más pequeñas. En vista escritorio está oculto por defecto*/
 #btn__menu-movil{
+    display: none; /*el botón está escondido en pantallas mayores, reapace con media querie */
     font-size: 2.2rem;
     padding: 8px 12px;
     border-radius: 6px;
+    background-color: var(--color-raspberry);
+    color: var(--color-secundario);
+    border: none;
+    outline: none;
 }
 
 /*HERO */
@@ -139,8 +144,12 @@ nav li:hover{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: calc(100vh - 103px); /*no me gusta, es medio traido de los pelos*/
-    padding: 6%;
+    min-height: calc(100vh - 100px); /*no me gusta, es medio traido de los pelos SE FIJÓ LA ALTURA DEL NAV A 100PX*/
+    padding: 9%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .hero h1{
@@ -148,7 +157,40 @@ nav li:hover{
     color: var(--color-antique-white);
     font-size: 3.5rem;
     text-align: center;
+    text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
+    margin-bottom: 1.5rem;
     
+}
+
+.hero h1 span{
+    font-weight: bolder;
+    color: var(--color-principal)
+}
+
+.hero p{
+    font-size: 1.25rem;
+    color: var(--color-antique-white);
+    font-weight: bold;
+    text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
+}
+
+.btn-hero{
+    border: none;
+    outline: none;
+    font-size: 1.75rem;
+    background-color: var(--color-raspberry);
+    color: var(--color-antique-white);
+    font-weight: bold;
+    padding: 16px 24px;
+    border-radius: 10px;
+    text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
+    transition:all 0.4s ease;
+}
+
+.btn-hero:hover{
+    background-color: var(--color-seal-brown);
+    color: var(--color-raspberry);
+    text-shadow: 2px 3px 2px rgba(255, 255, 255, 0.6);
 }
 
 /*MAIN */
@@ -193,14 +235,42 @@ nav li:hover{
 /*  ================================ MEDIA QUERIES  ================================ */
 /*=================================================================================== */
 
-/* MODO CELULARES PEQUEÑOS HASTA 576 PX */
+/* MODO DISPOSITIVOS MÓVILES  HASTA 768 PX */
 /****************************************/
 
 /* Que hay que hacer:
     - El menú del nav tiene que salir de un boton tipo "hamburguesa
 
 */
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
+    /* ======== HEADER - NAV ========= */
+    .logo{
+        font-size: 1.75rem; /*puede mejorar...*/
+    }
+
+    #nav__contenedor{
+        background-color: #00AFB9;
+        position: fixed;
+        left:-200%;
+        top: 100px;
+        width:100%;
+        height: calc(100vh - 100px);
+        text-align: center;
+    }
+
+    .nav__lista-links li{
+        display: block;
+    }
+
+    #nav__contenedor.modo-movil{
+        left:0;
+
+    }
+
+    
+    #btn__menu-movil{
+        display: inline-block;
+    }
 
 
     .contendedor-destino__presentacion{
