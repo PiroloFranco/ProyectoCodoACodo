@@ -38,22 +38,6 @@ Verde oliva: #556B2F (20%)*/
     --color-caput-mortum:#4C2719;
 }
 
-/*Reset*/
-/*======*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: var(--fuente-regular);
-    /*NUNCA NUNCA NUNCA PONER BACKGROUND COLOR EN UN RESET PORQUE DESPUES LOS ELEMENTOS QUEDAN CON FONDOS EXTRAÑOS !*/
-}
-
-img{
-    display: block;
-    width: 100%;
-}
 
 /*Clases de utilidad para no repetir código*/
 /*==========================================*/
@@ -85,7 +69,7 @@ img{
     /*Mantiene su posición auque se haga scroll :) */
     position: sticky;
     top: 0px;
-    height: 100px;
+    height: 100px;/*La altura se fijó en 100px para facilitar los cálculos para posicionar el menú movil*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -95,6 +79,7 @@ img{
     /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
     border: 3px solid violet;
 }
+
 
 
 .logo{
@@ -244,12 +229,18 @@ nav li:hover{
 */
 @media screen and (max-width:768px) {
     /* ======== HEADER - NAV ========= */
+
+    .contenedor-logo{
+        text-align: center;
+    }
+
     .logo{
         font-size: 1.75rem; /*puede mejorar...*/
     }
 
+
     #nav__contenedor{
-        background-color: #00AFB9;
+        background-color: #00AFB9; /*provisorio*/
         position: fixed;
         left:-200%;
         top: 100px;
@@ -277,5 +268,11 @@ nav li:hover{
         grid-template-columns:1fr; /*sólo una columna */
     }
     
+
+     /* ======== HERO ========= */
+     .hero h1{
+        font-size: 3.5rem;
+        
+    }
 }
 
