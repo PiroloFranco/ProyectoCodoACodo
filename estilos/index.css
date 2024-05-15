@@ -46,11 +46,6 @@ Verde oliva: #556B2F (20%)*/
     /*Evitar que la página se estire demasiado en pantallas muy grandes*/
     max-width:1320px;
     margin:0 auto; /*centramos el contenido de la página*/
-    /*padding: 0 1.5rem 1.5rem;*/
-    
-
-    /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
-    border: 2px solid yellow;
 }
 
 .padding-alrededor{
@@ -63,64 +58,6 @@ Verde oliva: #556B2F (20%)*/
 
 /*------------------------------------------------------------------------------------*/
 
-/*HEADER Y NAV */
-/*=================================================*/
-.encabezado{
-    /*Mantiene su posición auque se haga scroll :) */
-    position: sticky;
-    top: 0px;
-    height: 100px;/*La altura se fijó en 100px para facilitar los cálculos para posicionar el menú movil*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    background-color: var(--color-seal-brown);
-
-    /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
-    border: 3px solid violet;
-}
-
-
-
-.logo{
-    font-family: var(--fuente-acento);
-    font-weight: bolder;
-    cursor: pointer;
-    color:var(--color-secundario);
-    text-decoration: none; /*porque Bootstrap sobreescribe algunos estilos :( */
-    font-size: 2rem;
-}
-
-
-.nav__lista-links li{
-    display: inline-block;
-    padding: 1.25rem;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: var(--color-secundario);
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav li:hover{
-    transform: scale(1.3);
-    text-shadow: 2px 3px 2px rgba(78,59,49,0.8);
-    transition: transform 0.2s ease-in-out;
-}
-
-/*Botón que se ve en las pantallas más pequeñas. En vista escritorio está oculto por defecto*/
-#btn__menu-movil{
-    display: none; /*el botón está escondido en pantallas mayores, reapace con media querie */
-    font-size: 2.2rem;
-    padding: 8px 12px;
-    border-radius: 6px;
-    background-color: var(--color-raspberry);
-    color: var(--color-secundario);
-    border: none;
-    outline: none;
-}
 
 /*HERO */
 /*=================================================*/
@@ -223,45 +160,11 @@ nav li:hover{
 /* MODO DISPOSITIVOS MÓVILES  HASTA 768 PX */
 /****************************************/
 
-/* Que hay que hacer:
-    - El menú del nav tiene que salir de un boton tipo "hamburguesa
 
-*/
 @media screen and (max-width:768px) {
-    /* ======== HEADER - NAV ========= */
-
-    .contenedor-logo{
-        text-align: center;
-    }
-
-    .logo{
-        font-size: 1.75rem; /*puede mejorar...*/
-    }
+    /* ======== HEADER - NAV se movieron al archivo css del header ========= */
 
 
-    #nav__contenedor{
-        background-color: #00AFB9; /*provisorio*/
-        position: fixed;
-        left:-200%;
-        top: 100px;
-        width:100%;
-        height: calc(100vh - 100px);
-        text-align: center;
-    }
-
-    .nav__lista-links li{
-        display: block;
-    }
-
-    #nav__contenedor.modo-movil{
-        left:0;
-
-    }
-
-    
-    #btn__menu-movil{
-        display: inline-block;
-    }
 
 
     .contendedor-destino__presentacion{

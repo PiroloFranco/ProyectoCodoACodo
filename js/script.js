@@ -5,7 +5,7 @@ const barraMenu = document.getElementById("nav__contenedor");
 
 //Se asocia el evento de click al botón
 botonMenuMovil.addEventListener("click",()=>{
-    console.log("BUTTON CLICKED!")
+
     barraMenu.classList.toggle("modo-movil")
 })
 
