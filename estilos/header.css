@@ -32,7 +32,8 @@ nav ul li a{
     text-decoration: none;
 }
 
-nav li:hover{
+/* Esta clase representa los links que no tienen submenu*/
+.nav__link-simple:hover{
     transform: scale(1.3);
     text-shadow: 2px 3px 2px rgba(78,59,49,0.8);
     transition: transform 0.2s ease-in-out;
@@ -50,6 +51,10 @@ nav li:hover{
     width:100%;
     display: none;
     background-color: var(--color-secundario); /*provisorio*/
+}
+
+.nav__submenu-item a {
+    color:black; /*provisorio*/
 }
 
 
@@ -99,7 +104,6 @@ nav li:hover{
     }
 
 
-
     #nav__contenedor.modo-movil{
         left:0;
     }
@@ -111,5 +115,16 @@ nav li:hover{
     
     #btn__menu-movil{
         display: inline-block;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1220px) {
+    .logo{
+        font-size: 1.25rem;
+    }
+
+    .nav__lista-links li{
+        padding: 1rem;
+        font-size: 1rem;
     }
 }
