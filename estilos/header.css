@@ -50,11 +50,11 @@ nav ul li a{
     left:0px;
     width:100%;
     display: none;
-    background-color: var(--color-secundario); /*provisorio*/
+    background-color: var(--color-seal-brown); /*provisorio*/
 }
 
 .nav__submenu-item a {
-    color:black; /*provisorio*/
+    color:var(--color-secundario);
 }
 
 
@@ -90,7 +90,7 @@ nav ul li a{
 
 
     #nav__contenedor{
-        background-color: #00AFB9; /*provisorio*/
+        background-color: var(--color-raspberry);
         position: fixed;
         left:-200%;
         top: 100px; /* la altura fija del header*/
