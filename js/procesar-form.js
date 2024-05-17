@@ -43,33 +43,35 @@ function validarFormulario(e){
 
     let msjErrorDatos = "";
 
+
+
     //Validar nombre
-    if(txtInputNombre ===""  || !nombreRegEx.test(txtInputNombre)){
+    if(txtInputNombre === ""  || !nombreRegEx.test(txtInputNombre)){
         datosEnviadosValidos = false;
         msjErrorDatos += "El nombre no es válido "
     }
     //Validar apellido
-    if(txtInputApellido ===""  || !apellidoRegEx.test(txtInputApellido)){
+    if(txtInputApellido === ""  || !apellidoRegEx.test(txtInputApellido)){
         datosEnviadosValidos = false;
         msjErrorDatos += "El apellido no es válido "
     }
     //Validar prefijo
-    if(txtInputApellido ===""  || !prefijoRegEx.test(txtInputPrefijoCel)){
+    if(txtInputPrefijoCel === ""  || !prefijoRegEx.test(txtInputPrefijoCel)){
         datosEnviadosValidos = false;
         msjErrorDatos += "El prefijo no es válido "
     }
     //Validar celular
-    if(txtInputApellido ===""  || !numCelularRegEx.test(txtInputNumCel)){
+    if(txtInputNumCel === ""  || !numCelularRegEx.test(txtInputNumCel)){
         datosEnviadosValidos = false;
         msjErrorDatos += "El número de celular no es válido "
     }
     //Validar email
-    if(txtInputApellido ===""  || !emailRegEx.test(txtInputMail)){
+    if(txtInputMail === ""  || !emailRegEx.test(txtInputMail)){
         datosEnviadosValidos = false;
         msjErrorDatos += "El email no es válido "
     }
     //Validar comentario
-    if(txtInputApellido ===""){
+    if(txtCajaComentarios ===""){
         datosEnviadosValidos = false;
         msjErrorDatos += "No seas tímido, no dejes el comentario vacío ! "
     }
@@ -77,13 +79,12 @@ function validarFormulario(e){
     //Acá habría que cambiar el estilo del contenedor del texto tipo rojo para error, verde para ok
     //Y si quiero cada error en un <p>?
     if(datosEnviadosValidos){
-        displayError.innerHTML = "GRACIAS POR COMPLETAR EL FORMULARIO";
+        displayError.innerText = "GRACIAS POR COMPLETAR EL FORMULARIO";
 
         // Acá habría que borrar los datos del formulario o hacer algo con ellos....
     }else{
-        displayError.innerHTML = msjErrorDatos;
+        displayError.innerText = msjErrorDatos;
     }
-
 
 }
 
