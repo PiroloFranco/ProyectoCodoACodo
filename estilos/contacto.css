@@ -1,0 +1,86 @@
+/*CONTACTO.HTML */
+/*=================================================*/
+
+/* ===========================================================================*/
+/*  IMPORTATE !!!! */
+/*  POR DEFECTO EL ESTILO ESTÁ DEFINIDO EN TAMAÑO ESCRITORIO */
+/* ===========================================================================*/
+
+h1{
+    font-family: var(--fuente-acento);
+    font-weight: bolder;
+    margin: 1.5rem 0;
+}
+
+.contenedor-contenido-contacto{
+    margin: 0 auto; /*centrar el contenedor en la pagina*/
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    /*debug*/
+    border: 2px solid salmon;
+}
+
+
+.contenedor-campos{
+    margin-bottom: 1.5rem;
+}
+
+.contenedor-campos label{
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.contenedor-formulario input{
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+/*No quiero que los input de los celulares ocupen toda la linea*/
+.contenedor-formulario input:not(#input-prefijo-celular,#input-num-celular){
+    width: 100%;
+}
+
+select{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 6px 0;
+}
+
+textarea{
+    width: 100%;
+    min-height: 150px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#btn-enviar-formulario{
+    font-size: 1.5rem;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 0;
+    background-color: var(--color-raspberry);
+    color:var(--color-secundario)
+}
+
+#btn-enviar-formulario span{
+    margin-left: 0.75rem;
+}
+
+.decoracion-formulario{
+
+
+
+    /*debug*/
+    border: 2px solid fuchsia;
+}
+
+
+
+
+
+/*  ================================ MEDIA QUERIES  ================================ */
+/*=================================================================================== */
+
+/* MODO DISPOSITIVOS MÓVILES  HASTA 768 PX */
+/****************************************/

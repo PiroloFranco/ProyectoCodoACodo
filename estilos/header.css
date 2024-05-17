@@ -1,5 +1,11 @@
 /* SE AISLAN LOS ESTILOS DEL HEADER */
 
+
+/* ===========================================================================*/
+/*  IMPORTATE !!!! */
+/*  POR DEFECTO EL ESTILO ESTÁ DEFINIDO EN TAMAÑO ESCRITORIO */
+/* ===========================================================================*/
+
 .encabezado{
     /*Mantiene su posición auque se haga scroll :) */
     position: sticky;
@@ -76,8 +82,8 @@ nav ul li a{
     outline: none;
 }
 
-
-/* MEDIA QUERIES - POR AHORA VAN ACÁ, DESPUES SE ANALIZARÁ LA CONVENIENCIA DE AGRUPARLAS EN OTRO ARCHIVO*/
+/*  ================================ MEDIA QUERIES  ================================ */
+/*=================================================================================== */
 @media screen and (max-width:992px) {
     /* antes era (max-width:768px)*/
     .contenedor-logo{

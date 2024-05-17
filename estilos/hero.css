@@ -1,5 +1,12 @@
 /*HERO */
 /*=================================================*/
+
+/* ===========================================================================*/
+/*  IMPORTATE !!!! */
+/*  POR DEFECTO EL ESTILO ESTÁ DEFINIDO EN TAMAÑO ESCRITORIO */
+/* ===========================================================================*/
+
+
 .hero{
     background-image: url("../images/hero/emilio-lujan-OKWAtnEfN4M-unsplash.jpg");
     background-size: cover;
@@ -46,6 +53,7 @@
     font-weight: bold;
     padding: 16px 24px;
     border-radius: 10px;
+    box-shadow: 3px 5px 5px 4px rgba(245,245,220,0.5);
     text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
     transition:all 0.4s ease;
 }
