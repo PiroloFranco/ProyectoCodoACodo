@@ -8,13 +8,13 @@ const inputEmail = document.getElementById("input-email");
 const inputComoNosConociste = document.getElementById("selector-conociste");
 const cajaComentario = document.getElementById("caja-comentario");
 
+/*Capturar la referencia al contenedor de potenciales mensajes de error*/
+const displayError = document.getElementById("contenedor-msj-error");
+
 /* Capturar la referencia al botón de enviar formulario*/
 const btnEnviarForm = document.getElementById("btn-enviar-formulario");
 
 //Patrones de Expresiones Regulares (regEx)
-
-/* HAY QUE QUITAR LOS ESPACIOS DEL PRINCIPIO Y DEL FINAL ANTES DE PASARLOS POR EL REGEX !!! */
-
 //Que empiece con una letra, seguida de al menos una letra mas, seguida de cero o ningún espacio, seguido de al menos dos letras
 const nombreRegEx = /^[A-Za-zÀ-Öà-öÑñ]{2,40}(\s[A-Za-zÀ-Öà-öÑñ]{2,40})?$/ig;
 const apellidoRegEx = nombreRegEx; // se usa la misma expresión regular
@@ -28,21 +28,64 @@ function validarFormulario(e){
     e.preventDefault();
     console.log("ALGUIEN HIZO CLICK EN EL DICHOSO BOTON!")
 
+
+    //CUIDADO CON LOS TELÉFONOS !!!!!!!!!!
+
     const txtInputNombre = inputNombre.value.trim();
     const txtInputApellido = inputApellido.value.trim();
-    const txtInputPrefijoCel = inputPrefijoCelular.value.trim();
-    const txtInputNumCel = inputNumCelular.value.trim();
+    const txtInputPrefijoCel = Number(inputPrefijoCelular.value.trim());
+    const txtInputNumCel = Number(inputNumCelular.value.trim());
     const txtInputMail = inputEmail.value.trim();
     const seleccionComoNosConociste = inputComoNosConociste.value; //Ojo ! Sale opcion1,opcion 2 etc
     const txtCajaComentarios = cajaComentario.value.trim();
 
+    let datosEnviadosValidos = true; 
 
-    console.log(`Nombre: ${txtInputNombre} Apellido: ${txtInputApellido} Celular: ${txtInputPrefijoCel} ${txtInputNumCel}`);
-    console.log(`Email: ${txtInputMail} Comentario: ${txtCajaComentarios}`);
-    console.log(`Nos conociste: ${seleccionComoNosConociste}`)
+    let msjErrorDatos = "";
+
+    //Validar nombre
+    if(txtInputNombre ===""  || !nombreRegEx.test(txtInputNombre)){
+        datosEnviadosValidos = false;
+        msjErrorDatos += "El nombre no es válido "
+    }
+    //Validar apellido
+    if(txtInputApellido ===""  || !apellidoRegEx.test(txtInputApellido)){
+        datosEnviadosValidos = false;
+        msjErrorDatos += "El apellido no es válido "
+    }
+    //Validar prefijo
+    if(txtInputApellido ===""  || !prefijoRegEx.test(txtInputPrefijoCel)){
+        datosEnviadosValidos = false;
+        msjErrorDatos += "El prefijo no es válido "
+    }
+    //Validar celular
+    if(txtInputApellido ===""  || !numCelularRegEx.test(txtInputNumCel)){
+        datosEnviadosValidos = false;
+        msjErrorDatos += "El número de celular no es válido "
+    }
+    //Validar email
+    if(txtInputApellido ===""  || !emailRegEx.test(txtInputMail)){
+        datosEnviadosValidos = false;
+        msjErrorDatos += "El email no es válido "
+    }
+    //Validar comentario
+    if(txtInputApellido ===""){
+        datosEnviadosValidos = false;
+        msjErrorDatos += "No seas tímido, no dejes el comentario vacío ! "
+    }
+
+    //Acá habría que cambiar el estilo del contenedor del texto tipo rojo para error, verde para ok
+    //Y si quiero cada error en un <p>?
+    if(datosEnviadosValidos){
+        displayError.innerHTML = "GRACIAS POR COMPLETAR EL FORMULARIO";
+
+        // Acá habría que borrar los datos del formulario o hacer algo con ellos....
+    }else{
+        displayError.innerHTML = msjErrorDatos;
+    }
+
+
 }
-
-
 
 
 //El formulario se valida una vez que se presiona el boton "enviar"
