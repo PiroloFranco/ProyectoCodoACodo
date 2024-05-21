@@ -6,19 +6,30 @@
 /*  POR DEFECTO EL ESTILO ESTÁ DEFINIDO EN TAMAÑO ESCRITORIO */
 /* ===========================================================================*/
 
+
+/*clase de utilidad para darle formato al texto de las label y p que describen los campos del formulario*/
+.formato-label{
+    font-size: 1.5rem;
+    color:var(--color-raspberry);
+    font-weight: bold;
+}
+
+body{
+    background-color: var(--color-secundario);
+}
+
 h1{
     font-family: var(--fuente-acento);
     font-weight: bolder;
     margin: 1.5rem 0;
+    color:var(--color-principal);
+    letter-spacing: -0.5px;
 }
 
 .contenedor-contenido-contacto{
     margin: 0 auto; /*centrar el contenedor en la pagina*/
     display: grid;
     grid-template-columns: repeat(2,1fr);
-
-    /*debug*/
-    border: 2px solid salmon;
 }
 
 
@@ -26,17 +37,20 @@ h1{
     margin-bottom: 1.5rem;
 }
 
-.contenedor-campos label{
+.contenedor-campos label,input[type="radio"]{
     display: inline-block;
-    font-size: 1.5rem;
+}
+
+.contenedor-formularioinput:not([type="radio"]),select,textarea{
+    box-shadow: 6px 6px 5px 0px rgba(78,59,49,0.6);
 }
 
 .contenedor-formulario input{
     padding: 0.75rem;
     border-radius: 0.5rem;
 }
-/*No quiero que los input de los celulares ocupen toda la linea*/
-.contenedor-formulario input:not(#input-prefijo-celular,#input-num-celular){
+/*No quiero que los input de los celulares ocupen toda la linea tampoco los radio button, esto cambia con media queries*/
+.contenedor-formulario input:not(#input-prefijo-celular,#input-num-celular,[type="radio"]){
     width: 100%;
 }
 
@@ -44,6 +58,24 @@ select{
     width: 100%;
     font-size: 1.5rem;
     padding: 6px 0;
+}
+
+.grupo-radiobtn{
+    /**/
+}
+
+.grupo-radiobtn p{
+    margin-bottom: 0.75rem;
+}
+
+.grupo-radiobtn label{
+    /*debug*/
+    border: 1px solid blue;
+}
+
+.grupo-radiobtn input[type="radio"]{
+    /*debug*/
+    border: 2px solid purple;
 }
 
 textarea{
@@ -67,12 +99,23 @@ textarea{
     margin-left: 0.75rem;
 }
 
+#contenedor-msj-error{
+    text-align: center;
+}
+
+#contenedor-msj-error.datos-incorrectos{
+    font-size: 1.5rem;
+    color:red;
+}
+#contenedor-msj-error.datos-correctos{
+    font-size: 1.5rem;
+    color: green;
+}
+
 .decoracion-formulario{
-
-
-
-    /*debug*/
-    border: 2px solid fuchsia;
+    background-image: url("../images/contacto/ignacio-aguilar-JCE02CCv8Io-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -82,5 +125,22 @@ textarea{
 /*  ================================ MEDIA QUERIES  ================================ */
 /*=================================================================================== */
 
-/* MODO DISPOSITIVOS MÓVILES  HASTA 768 PX */
+/* MODO DISPOSITIVOS MÓVILES  HASTA 576 PX */
 /****************************************/
+
+@media screen and (max-width:576px) {
+    #input-prefijo-celular,
+    #input-num-celular{
+        display:block;
+        width: 100%;
+    }
+    /*No conviene mostrar la decoración junto al formulario en una pantalla tan pequeña*/
+    .decoracion-formulario{
+        display: none;
+    }
+
+    .contenedor-contenido-contacto{
+        grid-template-columns: 1fr;
+    }
+    
+}

@@ -38,7 +38,7 @@
                             <li class="nav__submenu-item"><a href="">Hotel de Franco</a></li>
                             <li class="nav__submenu-item"><a href="">Hotel de Juan Pablo</a></li>
                             <li class="nav__submenu-item"><a href="">Hotel de Verónica</a></li>
-                            <li class="nav__submenu-item"><a href="">Hotel de Sabrina</a></li>
+                            <li class="nav__submenu-item"><a href="hoteles/aura-patagonia/aura-patagonia.html">Aura Patagonia</a></li>
                         </ul><!--fin del submenu-->
                     </li><!--fin del link con submenu-->
                     <li  class="nav__link-simple">
@@ -57,51 +57,62 @@
         </header><!--fin del header-->
 
         <main>
-            <h1 class="texto-centrado">¡Nos encanta que quieras contactarnos ! </h1>
-            <div class="contenedor-contenido-contacto padding-alrededor">
-                <div class="contenedor-formulario">
+            <h1 class="texto-centrado">¡ Nos encanta que quieras contactarnos ! </h1>
+            <div class="contenedor-contenido-contacto">
+                <div class="contenedor-formulario padding-alrededor">
                     <form>
                         <div class="contenedor-campos">
-                            <label for="input-nombre">Nombre:</label>
+                            <label class="formato-label" for="input-nombre">Nombre:</label>
                             <input id="input-nombre" type="text" name="input-nombre" placeholder="Nombre">
                         </div>
                         <div class="contenedor-campos">
-                            <label for="input-apellido">Apellido:</label>
+                            <label class="formato-label" for="input-apellido">Apellido:</label>
                             <input id="input-apellido" type="text" name="input-apellido" placeholder="Apellido">
                         </div>
                         <div class="contenedor-campos">
-                            <label for="input-prefijo-celular">Celular:</label>
+                            <label class="formato-label" for="input-prefijo-celular">Celular:</label>
                             <input id="input-prefijo-celular" type="tel" name="input-prefijo-celular" placeholder="Prefijo sin cero">
                             <input id="input-num-celular" type="tel" name="input-num-celular" placeholder="N° Celular sin 15">
                         </div>
                         <div class="contenedor-campos">
-                            <label for="input-email">Email:</label>
+                            <label class="formato-label" for="input-email">Email:</label>
                             <input id="input-email" type="email" name="input-email" placeholder="Email">
                         </div>
                         <div class="contenedor-campos">
-                            <label for="selector-conociste">¿Cómo nos conociste?</label>
+                            <label class="formato-label" for="selector-conociste">¿Cómo nos conociste?</label>
                             <select name="selector-conociste" id="selector-conociste">
-                                <option value="opcion1">Por amigos o conocidos</option>
-                                <option value="opcion2">Googlenado</option>
-                                <option value="opcion2">Publicidad en los medios</option>
-                                <option value="opcion4">Tengo mala memoria...</option>
+                                <option value="amigos">Por amigos o conocidos</option>
+                                <option value="Google">Googlenado</option>
+                                <option value="Publicidad">Publicidad en los medios</option>
+                                <option value="No recuerda">Tengo mala memoria...</option>
                             </select><!--fin del select-->
                         </div>
+                        <!--radio buttons-->
+                        <div class="contenedor-campos grupo-radiobtn">
+                            <p class="formato-label">Forma de contacto preferida:</p>
+                            <div class="fila-radiobtn">
+                                <label class="formato-label" for="radiobtn-celular">Celular</label>
+                                <input type="radio" id="radiobtn-celular" name="radio-contacto" value="Celular">
+                            </div>
+                            <div class="fila-radiobtn">
+                                <label class="formato-label" for="radiobtn-email">Email</label>
+                                <input type="radio" id="radiobtn-email" name="radio-contacto" value="Email">
+                            </div>
+                        </div><!--fin radio buttons-->
+
                         <div class="contenedor-campos">
-                            <label for="caja-comentario">¡Nos encanta leer comentarios!</label>
+                            <label class="formato-label" for="caja-comentario">¡Nos encanta leer comentarios!</label>
                             <textarea name="caja-comentario" id="caja-comentario" placeholder="Yo quería decirles que..."></textarea>
                         </div>
 
                         <button id="btn-enviar-formulario" type="submit">Enviar<span><i class="fa-regular fa-paper-plane"></i></span></button>
                     </form><!--fin del form-->
-                    <div id="contenedor-msj-error">
-
-                    </div>
+                    <div id="contenedor-msj-error" class="padding-alrededor"></div><!--AQUI SE MUESTRAN POTENCIALES ERRORES DE VALIDACION AL USUARIO-->
                 </div><!--contenedor formulario-->
 
                 <div class="decoracion-formulario">
-                    
-                </div><!--contenedor formulario-->
+                    <!-- aquí se muestra una imagen como backround con css-->
+                </div><!--decoracion formulario-->
 
             </div><!--contenedor contenido contacto-->
         </main>

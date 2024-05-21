@@ -15,6 +15,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: var(--color-seal-brown);
+    z-index: 100;
 }
 
 .logo{
