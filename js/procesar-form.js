@@ -7,6 +7,8 @@ const inputNumCelular = document.getElementById("input-num-celular");
 const inputEmail = document.getElementById("input-email");
 const inputComoNosConociste = document.getElementById("selector-conociste");
 const cajaComentario = document.getElementById("caja-comentario");
+const radioBtnCelular = document.getElementById("radiobtn-celular");
+const radioBtnEmail = document.getElementById("radiobtn-email");
 
 /*Capturar la referencia al contenedor de potenciales mensajes de error*/
 const displayError = document.getElementById("contenedor-msj-error");
@@ -73,21 +75,29 @@ function validarFormulario(e){
     console.log(eleccionComoNosConociste);
     switch (eleccionComoNosConociste) {
         case "amigos":
-            opcionConocisteTxt = "Que suerte que tus amigos nos conozcan!\n"
+            opcionConocisteTxt = "¡Que suerte que tus amigos nos conozcan!\n"
             break;
         case "Google":
-            opcionConocisteTxt = "Que bueno que Google te haya acercado a nosotros!\n"
+            opcionConocisteTxt = "¡Que bueno que Google te haya acercado a nosotros!\n"
             break;
         case "Publicidad":
-            opcionConocisteTxt = "Que bueno que nuestra publicidad te haya gustado!\n"
+            opcionConocisteTxt = "¡Que bueno que nuestra publicidad te haya gustado!\n"
             break;
         case "No recuerda":
-            opcionConocisteTxt = "Bueno, no importa que no recuerdes cómo, lo importante es que nos hayas encontrado!\n"
+            opcionConocisteTxt = "Bueno, no importa que no recuerdes cómo, ¡lo importante es que nos hayas encontrado!\n"
             break;
     }
 
     //Validar radio buttons
-    
+    let formaContactoPreferida ="";
+    if(radioBtnCelular.checked){
+        formaContactoPreferida = "En breve te contactaremos en tu celular"
+    } else if (radioBtnEmail.checked){
+        formaContactoPreferida = "En breve te responderemos por mail"
+    }else{
+        datosEnviadosValidos = false;
+        msjErrorDatos += "Por favor elige una forma de contacto\n"
+    }
 
 
     //Validar comentario
@@ -98,7 +108,7 @@ function validarFormulario(e){
 
     if(datosEnviadosValidos){
         //Acá hay que agregar las opciones a lo que devuelven "como nos conociste + formapreferida contacto"
-        displayError.innerText = opcionConocisteTxt + "¡ GRACIAS POR COMPLETAR EL FORMULARIO !" + "Te contactaremos a la breverdad por ";
+        displayError.innerText = opcionConocisteTxt + "¡ GRACIAS POR COMPLETAR EL FORMULARIO !\n" + formaContactoPreferida;
         displayError.classList.add("datos-correctos");
 
         // Acá habría que borrar los datos del formulario o hacer algo con ellos....

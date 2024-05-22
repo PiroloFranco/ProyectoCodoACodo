@@ -88,16 +88,18 @@
                             </select><!--fin del select-->
                         </div>
                         <!--radio buttons-->
-                        <div class="contenedor-campos grupo-radiobtn">
+                        <div class="contenedor-campos">
                             <p class="formato-label">Forma de contacto preferida:</p>
-                            <div class="fila-radiobtn">
-                                <label class="formato-label" for="radiobtn-celular">Celular</label>
-                                <input type="radio" id="radiobtn-celular" name="radio-contacto" value="Celular">
-                            </div>
-                            <div class="fila-radiobtn">
-                                <label class="formato-label" for="radiobtn-email">Email</label>
-                                <input type="radio" id="radiobtn-email" name="radio-contacto" value="Email">
-                            </div>
+                            <div class="grupo-radiobtn">
+                                <div class="fila-radiobtn">
+                                    <label class="formato-label" for="radiobtn-celular">Celular</label>
+                                    <input type="radio" id="radiobtn-celular" name="radio-contacto" value="Celular">
+                                </div>
+                                <div class="fila-radiobtn">
+                                    <label class="formato-label" for="radiobtn-email">Email</label>
+                                    <input type="radio" id="radiobtn-email" name="radio-contacto" value="Email">
+                                </div>
+                            </div> 
                         </div><!--fin radio buttons-->
 
                         <div class="contenedor-campos">
@@ -138,8 +140,9 @@
     </div><!--fin contenedor general-->
 
 
-
+    <!--Script que maneja el menú del navbar-->
     <script src="../js/script.js"></script>
+    <!--Script que valida el formulario-->
     <script src="../js/procesar-form.js"></script>
 
 </body>
