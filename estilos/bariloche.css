@@ -6,6 +6,8 @@
     background-color: #80513f;
     color: #f5f5dc;
     text-shadow: 1px 1px 2px #888888;
+    max-width: 1320px;
+    
 }
 
 section p{
@@ -24,6 +26,8 @@ section p{
 }
 
 .servicios {
+  margin: auto;
+  max-width: 1320px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 10px;
@@ -34,6 +38,7 @@ section p{
 .servicios li {
   text-align: center;
   color: #f5f5dc;
+  padding: 10px;
 }
 
 .carousel{
